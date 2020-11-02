@@ -6,11 +6,6 @@ use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 
-// TODO: GitHubにアップロードする
-
-// ドキュメントコメントはなるべく英語で書く
-// プログラム中のコメントは日本語でもOKかな
-
 /// Generator to create daily work reports.
 ///
 /// ## Examples
@@ -129,7 +124,7 @@ impl WorkReportGenerator {
             println!("    Created: {}", &src_filename);
         }
         fs::copy(&src_filename, &dst_filename).expect("cannot copy the file.");
-        println!("Created: {}.", &dst_filename);
+        println!("    Created: {}.", &dst_filename);
     }
 
     /// Create `Template.txt`
